@@ -2,6 +2,7 @@ $(function(){
 
 	navigation.navigateOnClick();
 	navigation.navigateOnScroll();
+	mobileMenu.mobileToggle();
 
 	$(window).on('scroll', function(e) {
 		skillsAnim.skillsAnimate(e);
@@ -19,6 +20,27 @@ $(function(){
 	      	 $('input[name="our-products"]'));
 
 });
+;var mobileMenu = (function() {
+
+	return {
+		mobileToggle: mobileToggle
+	}
+
+	function mobileToggle() {
+		$('.mobile-menu__burger').click(function(){
+			$(".search-js").slideUp();
+			$("#mobile").slideToggle("slow");
+		});
+
+		$('.mobile-menu__search_icon').click(function(){
+			$("#mobile").slideUp();
+			$(".search-js").slideToggle("slow");
+		});
+	}
+
+})();
+
+
 ;function carousel(slider, slideLeft, slideRight, slideNum, radioButton) {
 
 	var slider = slider;
@@ -156,35 +178,40 @@ $(function(){
   }
 
   function navigateOnClick() {
-    $('#home').on('click', function() {
+    $('.home-js').on('click', function() {
+      $("#mobile").slideUp();
       $('html,body').animate({
         scrollTop: $("#page1").offset().top 
       }, 1000);
       return false;
     });
   
-    $('#whyUs').on('click', function() {
+    $('.whyUs-js').on('click', function() {
+      $("#mobile").slideUp();
       $('html,body').animate({
         scrollTop: $("#page2").offset().top - 70
       }, 1000);
       return false;
     });
   
-    $('#products').on('click', function() {
+    $('.products-js').on('click', function() {
+      $("#mobile").slideUp();
       $('html,body').animate({
         scrollTop: $("#page3").offset().top - 70
       }, 1000);
       return false;
     });
   
-    $('#about').on('click', function() {
+    $('.about-js').on('click', function() {
+      $("#mobile").slideUp();
       $('html,body').animate({
         scrollTop: $("#page4").offset().top - 70
       }, 1000);
       return false;
     });
   
-    $('#contact').on('click', function() {
+    $('.contact-js').on('click', function() {
+      $("#mobile").slideUp();
       $('html,body').animate({
         scrollTop: $("#page5").offset().top - 70
       }, 1000);
@@ -204,15 +231,15 @@ $(function(){
     $(".menu__item a").removeClass("active"); 
 
     if ($(document).scrollTop() >= page1Top && $(document).scrollTop() < page2Top) {
-      $("#home").addClass("active");
+      $(".home-js").addClass("active");
     } else if ($(document).scrollTop() >= page2Top && $(document).scrollTop() < page3Top) {
-      $("#whyUs").addClass("active");
+      $(".whyUs-js").addClass("active");
     } else if ($(document).scrollTop() >= page3Top && $(document).scrollTop() < page4Top) {
-      $("#products").addClass("active");
+      $(".products-js").addClass("active");
     } else if ($(document).scrollTop() >= page4Top && $(document).scrollTop() < page5Top) {
-      $("#about").addClass("active");
+      $(".about-js").addClass("active");
     } else if ($(document).scrollTop() >= page5Top) {
-      $("#contact").addClass("active");
+      $(".contact-js").addClass("active");
     };
   };
 
@@ -235,8 +262,8 @@ $(function(){
 					};
 				},3000/$('.skills__graph-number', element).data('graphNumber'));
 			});
+			$(this).off(e); // execute once
 		};
-		$(this).off(e); // execute once
 	};
 
 	return {

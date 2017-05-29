@@ -1,20 +1,16 @@
 module.exports = function(grunt) {
 
-  grunt.initConfig({ // Вказується конфігурація
-   concat: { // злив усіх файлів в один!
+  grunt.initConfig({ 
+   concat: { 
       options: {
         separator: ';'
       },
-      dist: { // пункти призначення запису файлів
+      dist: { 
         src: ['assets/javascript/*.js'],
         dest: 'assets/dist/main.js'
       },
-      dist: { // пункти призначення запису файлів
-        src: ['assets/css/*.css'],
-        dest: 'assets/dist/main.css'
-      }
     },
-    uglify: { // мініфікація
+    uglify: { 
         dist: {
             src: ['assets/dist/main.js'],
             dest: 'assets/dist/main.min.js'
@@ -25,7 +21,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
     
-  grunt.registerTask('default', ['concat']); // Реєструєм задачі для виконання!
+  grunt.registerTask('default', ['concat']); 
   grunt.registerTask('dev', ['concat','uglify']); 
 
 };

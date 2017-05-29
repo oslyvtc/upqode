@@ -17,7 +17,61 @@
 		<div class="fixed-menu">
 		  <div class="container">
 		  	<div class="row header__top">
-		  		<div class="col-md-5 header__logo">
+		  		<i class="fa fa-bars fa-2x mobile-menu__burger"></i>
+					<i class="fa fa-search fa-2x mobile-menu__search_icon"></i>
+		  		<form action="" class="mobile__search-form search-js">
+		  			<input type="text" class="mobile__search-input" placeholder="Start searching here...">
+		  			<input type="submit" value="search" class="mobile__search-submit">
+		  		</form>
+		  		<nav class="mobile-menu">
+		  			<ul class="mobile-menu__list" id="mobile">
+		  				<li class="mobile-menu__item">
+		  					<a href="" class="mobile-menu__link home-js">Home</a>
+		  				</li>
+		  				<li class="mobile-menu__item">
+		  					<a href="" class="mobile-menu__link whyUs-js">Why choose us</a>
+		  				</li>
+		  				<li class="mobile-menu__item">
+		  					<a href="" class="mobile-menu__link products-js">Products</a>
+		  					<!-- <ul class="mobile-menu__product-drop">
+		  						<li class="mobile-menu__product-drop-item">
+		  							<a href="" class="mobile-menu__product-drop-link">Products</a>
+		  						</li>
+		  						<li class="mobile-menu__product-drop-item">
+		  							<a href="" class="mobile-menu__product-drop-link">Products</a>
+		  						</li>
+		  						<li class="mobile-menu__product-drop-item">
+		  							<a href="" class="mobile-menu__product-drop-link">Products</a>
+		  						</li>
+		  						<li class="mobile-menu__product-drop-item">
+		  							<a href="" class="mobile-menu__product-drop-link">Products</a>
+		  						</li>
+		  					</ul> --> 
+		  					<!-- i think this is not necessary for mobile menu -->
+		  				</li>
+		  				<li class="mobile-menu__item">
+		  					<a href="" class="mobile-menu__link about-js">About</a>
+		  				</li>
+		  				<li class="mobile-menu__item">
+		  					<a href="" class="mobile-menu__link contact-js">Contact</a>
+		  				</li>
+		  				<li class="mobile-menu__item mobile-menu__item-social">
+								<a class="social-link facebook-link"href="https://www.facebook.com/">
+									<img class="mobile-social__pic" src="assets/images/facebook.png" height="21" width="11" alt="facebook">
+								</a>
+								<a class="social-link google-link" href="https://www.google.com">
+									<img class="mobile-social__pic" src="assets/images/google.png" height="17" width="20" alt="google">
+								</a>
+								<a class="social-link twitter-link" href="https://twitter.com">
+									<img class="mobile-social__pic" src="assets/images/twit.png" height="17" width="19" alt="twitter">
+								</a>
+								<a class="social-link dribble-link" href="https://dribbble.com/">
+									<img class="mobile-social__pic" src="assets/images/ball.png" height="21" width="20" alt="dribble">
+								</a>
+		  				</li>
+		  			</ul>
+		  		</nav>
+		  		<div class="col-xs-5 header__logo">
 		  			<a href="#" class="logo">
 		  				<img src="assets/images/logo.png" height="24" width="135" alt="logo" class="logo__pic">
 		  			</a>
@@ -25,13 +79,13 @@
 		  		<nav class="col-md-5 header__menu">
 		  			<ul class="menu__list">
 		  				<li class="menu__item">
-		  					<a href="#" id="home" class="menu__link active" title="Home">Home</a>
+		  					<a href="#" class="menu__link home-js" title="Home">Home</a>
 		  				</li>
 		  				<li class="menu__item">
-		  					<a href="#" id="whyUs" class="menu__link" title="Why choose us">Why choose us</a>
+		  					<a href="#" class="menu__link whyUs-js" title="Why choose us">Why choose us</a>
 		  				</li>
 		  				<li class="menu__item">
-		  					<a href="#" id="products" class="menu__link" title="Products">Products</a>
+		  					<a href="#" class="menu__link products-js" title="Products">Products</a>
 		  					<div class="menu__item-dropdown">
 		  						<ul class="nested-menu">
 		  						<li class="nested-menu__item">
@@ -152,17 +206,20 @@
 		  					</div>
 		  				</li>
 		  				<li class="menu__item">
-		  					<a href="#" id="about" class="menu__link" title="About">About</a>
+		  					<a href="#" class="menu__link about-js" title="About">About</a>
 		  				</li>
 		  				<li class="menu__item">
-		  					<a href="" id="contact" class="menu__link" title="Contact">Contact</a>
+		  					<a href="" class="menu__link contact-js" title="Contact">Contact</a>
 		  				</li>
 		  			</ul>
 		  		</nav>
 		  		<div class="col-md-2 header__search">
 		  			<form action="" class="header__search-form">
 		  				<input type="text" class="header__search-input">
-		  				<input type="submit" value="" class="header__search-submit">
+		  				<label class="header__search-submit_label">
+		  					<i class="fa fa-search header__search-submit_icon" aria-hidden="true"></i>
+		  					<input type="submit" value="" class="header__search-submit">
+		  				</label>
 		  			</form>
 		  		</div>
 		  	</div> 
@@ -234,7 +291,7 @@
 				</p>
 			</div>
 			<div class="row whyus__description">
-				<div class="col-md-2 col-md-offset-1 whyus__column">
+				<div class="col-sm-6 col-lg-2 col-lg-offset-1 whyus__column">
 					<div class="whyus__icon whyus__heart_icon"></div>
 					<div class="whyus__no-hover">
 						<h3 class="whyus__column_title">Your title</h3>
@@ -248,7 +305,7 @@
 						<div class="whyus__hover_icon-search"></div>
 					</div>
 				</div>
-				<div class="col-md-2 whyus__column">
+				<div class="col-sm-6 col-lg-2 whyus__column">
 					<div class="whyus__icon whyus__message_icon"></div>
 					<div class="whyus__no-hover">
 						<h3 class="whyus__column_title">Your title</h3>
@@ -262,7 +319,7 @@
 						<div class="whyus__hover_icon-search"></div>
 					</div>
 				</div>
-				<div class="col-md-2 whyus__column">
+				<div class="col-sm-6 col-lg-2 whyus__column">
 					<div class="whyus__icon whyus__comp_icon"></div>
 					<div class="whyus__no-hover">
 						<h3 class="whyus__column_title">Your title</h3>
@@ -276,7 +333,7 @@
 						<div class="whyus__hover_icon-search"></div>
 					</div>
 				</div>
-				<div class="col-md-2 whyus__column">
+				<div class="col-sm-6 col-lg-2 whyus__column">
 					<div class="whyus__icon whyus__star_icon"></div>
 					<div class="whyus__no-hover">
 						<h3 class="whyus__column_title">Your title</h3>
@@ -290,7 +347,7 @@
 						<div class="whyus__hover_icon-search"></div>
 					</div>
 				</div>
-				<div class="col-md-2 whyus__column">
+				<div class="col-sm-12 col-lg-2 whyus__column">
 					<div class="whyus__icon whyus__flag_icon"></div>
 					<div class="whyus__no-hover">
 						<h3 class="whyus__column_title">Your title</h3>
@@ -321,7 +378,7 @@
 					<div class="container">
 						<div class="our-products__main">
 							<div class="row">
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">1Title</h3>
@@ -329,7 +386,7 @@
 										<p class="our-products__text">Duis bibendum diam non erat facilaisis en ter</p>
 									</div>
 								</div>
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">1Title</h3>
@@ -337,7 +394,7 @@
 										<p class="our-products__text">Duis bibendum diam non erat facilaisis en ter</p>
 									</div>
 								</div>
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">1Title</h3>
@@ -345,9 +402,7 @@
 										<p class="our-products__text">Duis bibendum diam non erat facilaisis en ter</p>
 									</div>
 								</div>
-							</div>		
-							<div class="row">
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">1Title</h3>
@@ -355,7 +410,7 @@
 										<p class="our-products__text">Duis bibendum diam non erat facilaisis en ter</p>
 									</div>
 								</div>
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">1Title</h3>
@@ -363,7 +418,7 @@
 										<p class="our-products__text">Duis bibendum diam non erat facilaisis en ter</p>
 									</div>
 								</div>
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">1Title</h3>
@@ -379,7 +434,7 @@
 					<div class="container">
 						<div class="our-products__main">
 							<div class="row">
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">2Title</h3>
@@ -387,7 +442,7 @@
 										<p class="our-products__text">Duis bibendum diam non erat facilaisis en ter</p>
 									</div>
 								</div>
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">2Title</h3>
@@ -395,7 +450,7 @@
 										<p class="our-products__text">Duis bibendum diam non erat facilaisis en ter</p>
 									</div>
 								</div>
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">2Title</h3>
@@ -403,9 +458,7 @@
 										<p class="our-products__text">Duis bibendum diam non erat facilaisis en ter</p>
 									</div>
 								</div>
-							</div>		
-							<div class="row">
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">2Title</h3>
@@ -413,7 +466,7 @@
 										<p class="our-products__text">Duis bibendum diam non erat facilaisis en ter</p>
 									</div>
 								</div>
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">2Title</h3>
@@ -421,7 +474,7 @@
 										<p class="our-products__text">Duis bibendum diam non erat facilaisis en ter</p>
 									</div>
 								</div>
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">2Title</h3>
@@ -437,7 +490,7 @@
 					<div class="container">
 						<div class="our-products__main">
 							<div class="row">
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">3Title</h3>
@@ -445,7 +498,7 @@
 										<p class="our-products__text">Duis bibendum diam non erat facilaisis en ter</p>
 									</div>
 								</div>
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">3Title</h3>
@@ -453,7 +506,7 @@
 										<p class="our-products__text">Duis bibendum diam non erat facilaisis en ter</p>
 									</div>
 								</div>
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">3Title</h3>
@@ -461,9 +514,7 @@
 										<p class="our-products__text">Duis bibendum diam non erat facilaisis en ter</p>
 									</div>
 								</div>
-							</div>		
-							<div class="row">
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">3Title</h3>
@@ -471,7 +522,7 @@
 										<p class="our-products__text">Duis bibendum diam non erat facilaisis en ter</p>
 									</div>
 								</div>
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">3Title</h3>
@@ -479,7 +530,7 @@
 										<p class="our-products__text">Duis bibendum diam non erat facilaisis en ter</p>
 									</div>
 								</div>
-								<div class="col-md-4 our-products__column">
+								<div class="col-sm-6 col-lg-4 our-products__column">
 									<div class="our-products__pic"></div>
 									<div class="our-products__description">
 										<h3 class="our-products__item-title">3Title</h3>
@@ -488,8 +539,6 @@
 									</div>
 								</div>
 							</div>
-
-
 						</div>
 					</div>
 				</li>
@@ -517,7 +566,7 @@
 	<section class="about-us" id="page4">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 about-us__main">
+				<div class="col-sm-6 about-us__main">
 					<h2 class="about-us__title"><span class="blue">About</span> Us</h2>
 					<p class="about-us__pre-title">
 						Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euism
@@ -575,8 +624,8 @@ Nullam at scelerisque tellus mattis volutpat rhoncus,
 						</div>
 					</div>
 				</div>
-				<div class="col-md-offset-2 col-md-4">
-					<img class="about-us__pic" src="assets/images/tablet.png" height="589" width="361" alt="">
+				<div class="col-md-offset-2 col-sm-offset-1 col-sm-4">
+					<img class="about-us__pic" src="assets/images/tablet.png" alt="">
 				</div>
 			</div>
 		</div>
@@ -593,21 +642,21 @@ Nullam at scelerisque tellus mattis volutpat rhoncus,
 			</p>
 		</div>
 		<div class="get-in-touch__middle">
-			<iframe class="get-in-touch__google-maps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10295.32895195453!2d24.040353249999995!3d49.8268182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1495726163280" width="100%" height="695" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<iframe class="get-in-touch__google-maps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10295.32895195453!2d24.040353249999995!3d49.8268182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1495726163280" frameborder="0" style="border:0" allowfullscreen></iframe>
 			<div class="get-in-touch__main">
-				<form class="form">
-					<input type="text" class="form__input form__input_name" placeholder="Full Name" required></input>
-					<input type="email" class="form__input form__input_email" placeholder="E-mail address" required></input>
-					<textarea class="form__input form__textarea" placeholder="Message" required></textarea>
+				<form class="form-contacts">
+					<input type="text" class="form-contacts__input form-contacts__input_name" placeholder="Full Name" required></input>
+					<input type="email" class="form-contacts__input form__input_email" placeholder="E-mail address" required></input>
+					<textarea class="form-contacts__input form-contacts__textarea" placeholder="Message" required></textarea>
 					<div class="clearfix">
-						<label class="form__checkbox_label">
-							<input class="form__checkbox" type="checkbox">
-							<span class="form__checkbox_real">
-								<i class="fa fa-check form__checkbox_check" ></i>
+						<label class="form-contacts__checkbox_label">
+							<input class="form-contacts__checkbox" type="checkbox">
+							<span class="form-contacts__checkbox_real">
+								<i class="fa fa-check form-contacts__checkbox_check" ></i>
 							</span>
-							<span class="form__checkbox_text">I like your company</span>
+							<span class="form-contacts__checkbox_text">I like your company</span>
 						</label>
-						<input class="form__submit" type="submit" value="Send">
+						<input class="form-contacts__submit" type="submit" value="Send">
 					</div>
 				</form>
 				<div class="contacts">
@@ -660,10 +709,7 @@ Nullam at scelerisque tellus mattis volutpat rhoncus,
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-	<script src="assets/javascript/skillsAnimate.js"></script>
-	<script src="assets/javascript/navigationOnScroll.js"></script>
-	<script src="assets/javascript/mySlider.js"></script>
-	<script src="assets/javascript/main.js"></script>
+	<script src='assets/dist/main.min.js'></script>
 
 </body>
 </html>

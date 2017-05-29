@@ -54,25 +54,37 @@ body {
 													/*/// HEADER ///*/
 .fixed-menu {
 	position: fixed;
-	min-height: 70px;
+	height: 70px;
 	background-color: #ffffff;
 	top: 0;
 	width: 100%;
 	z-index: 9999999999999;
-	border: 1px solid #5695dc;
+	border-bottom: 1px solid #5695dc;
+	padding: 0 2%;
 }
 
 .header__top {
 	padding-top: 20px; 
 }
 
-			/*/// Header LOGO ///*/
+											/*/// Header LOGO ///*/
 
 .logo__pic {
 	margin-top: 5px;
 }
 
-			/*/// HEADER Menu ///*/
+											/*/// HEADER Menu ///*/
+
+.menu__list {
+	text-align: justify;
+}
+
+.menu__list:after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+	height: 1px;
+}
 
 .menu__item {
 	display: inline-block;
@@ -84,7 +96,7 @@ body {
 	font-size: 16px;
 	font-family: Lato Regular, sans-serif;
 	color: #232323;
-	padding: 7px 20px 27px 0;
+	padding: 7px 0px 27px 0;
 }
 
 .menu__item:hover .menu__link, .menu__link:focus {
@@ -110,7 +122,95 @@ body {
 	visibility:hidden;
 }
 
-			/*/// Header search ///*/
+									/*/// Mobile menu ///*/
+
+.mobile-menu__burger {
+	display: none;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.mobile-menu__list {
+	display: none;
+	position: absolute;
+	top: 69px;
+	right: 0px;
+	width: 100%;
+	background: rgba(43,29,64,.8);
+	padding: 25px 0 0px 17px;
+	border-top: 2px solid #fff200;
+	text-align: center;
+}
+
+.mobile-menu__link {
+	display: block;
+	padding: 11px 0;
+	color: #fff;
+	font-family: Helvetica, serif;
+	font-size: 16px;
+}
+
+.mobile-menu__link:hover, .mobile-menu__link:focus {
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.mobile-menu__search {
+	margin-bottom: 25px;
+}
+
+.mobile-menu__search_icon {
+	display: none;
+	position: absolute;
+  top: 20px;
+  right: 70px;
+  padding-right: 20px;
+  border-right: 3px solid #232323;;
+  cursor: pointer;
+}
+
+.mobile__search-form {
+	display: none;
+	position: absolute;
+	top: 69px;
+	right: 0px;
+	width: 100%;
+	border-top: 2px solid #fff200;
+}
+
+.mobile__search-input, .mobile__search-submit {
+	position: relative;
+	width: 100%;
+	background: rgba(43,29,64,.8);
+	border: none;
+	padding: 15px 25px;
+	text-align: center;
+	color: #fff;
+}
+
+.mobile__search-submit {
+	text-transform: uppercase;
+	background: rgba(43,29,64,.9);
+}
+
+.mobile-social__pic {
+	margin: 20px;
+}
+
+.mobile-menu__item .social-link {
+	text-decoration: none;
+}
+
+.mobile-menu__item-social {
+	background: rgba(43,29,64,.9);
+	margin-left: -20px;
+}
+
+										/*/// Header search ///*/
 
 .header__search {
 	padding: 0;
@@ -134,19 +234,23 @@ body {
 	outline: none;
 }
 
-.header__search-submit {
+.header__search-submit_icon {
 	position: absolute;
-	background: url(../images/search.png) 0 0 no-repeat;
-	border: none;
 	width: 14px;
-	height: 14px;
+	height: 16px;
 	top: 0;
 	right: 40px;
 	bottom: 0;
 	margin: auto;
+	cursor: pointer;
 }
 
-			/*/// Header Nested menu ///*/
+.header__search-submit {
+	display: none;
+}
+
+
+												/*/// Header Nested menu ///*/
 
 .menu__item:hover .menu__item-dropdown {
 	display: block;
@@ -213,7 +317,7 @@ body {
   z-index: 999;
 }
 
-										/*/// HEADER main ///*/
+															/*/// HEADER main ///*/
 
 .header-main {
 	position: relative;
@@ -328,7 +432,7 @@ input[name="header__radio"]:checked+.radio__button_styled {
 															/*/// WHY US SECTION ///*/
 
 
-					/*/// WHY US TOP ///*/
+													/*/// WHY US TOP ///*/
 .whyus {
 	margin-bottom: 115px;
 }
@@ -360,13 +464,14 @@ input[name="header__radio"]:checked+.radio__button_styled {
 
 
 
-						/*/// WHY US COLUMNS ///*/
+													/*/// WHY US COLUMNS ///*/
 
 .whyus__column {
 	cursor: pointer;
 	min-width: 200px;
 	margin: 0 17px;
 	border: 1px solid #f8f8f8;
+	padding: 0;
 }
 
 .whyus__icon {
@@ -426,8 +531,7 @@ input[name="header__radio"]:checked+.radio__button_styled {
 	height: 150px;
 	text-align: center;
 	display: none;
-	min-width: 200px;
-	margin-left: -16px;
+	width: 100%;
 }
 
 .whyus__column_title-hover {
@@ -468,7 +572,7 @@ input[name="header__radio"]:checked+.radio__button_styled {
 
 													/*/// OUR PRODUCTS SECTION///*/
 
-/*/// Our products TOP ///*/
+										/*/// Our products TOP ///*/
 
 .our-products {
 	position: relative;
@@ -549,7 +653,7 @@ input[name="header__radio"]:checked+.radio__button_styled {
 	line-height: 27px;
 }
 
-/*/// slider our-products  ///*/
+														/*/// slider our-products  ///*/
 
 .our-products__modal {
 	overflow: hidden;
@@ -654,11 +758,13 @@ input[name="header__radio"]:checked+.radio__button_styled {
 .about-us__pic {
 	margin-top: 70px;
 	margin-left: 16px;
+	max-width: 361px;
+	max-height: 589px;
 }
 
 															/*/// GET IN TOUCH ///*/
 
-/*/// GET IN TOUCH Top ///*/
+									/*/// GET IN TOUCH Top ///*/
 
 .get-in-touch__top {
 	text-align: center;
@@ -684,18 +790,20 @@ input[name="header__radio"]:checked+.radio__button_styled {
 	line-height: 27px;
 }
 
-/*/// GET IN TOUCH middle ///*/
+									/*/// GET IN TOUCH middle ///*/
 
 .get-in-touch__middle {
 	position: relative;
 	background-color: rgba(0,0,0, 0.65);
 	width: 100%;
-	height: 695px;
+	min-height: 695px;
 }
 
 .get-in-touch__google-maps {
 	position: absolute;
 	z-index: -1;
+	width: 100%; 
+	min-height: 695px;
 }
 
 .get-in-touch__main {
@@ -714,16 +822,16 @@ input[name="header__radio"]:checked+.radio__button_styled {
 	padding: 82px 68px;
 }
 
-/*/// GET IN TOUCH FORM ///*/
+										/*/// GET IN TOUCH FORM ///*/
 
-.form {
+.form-contacts {
 	display: inline-block;
 	max-width: 490px;
 	font-size: 0;
 	font-family: Lato Regular, sans-serif;
 }
 
-.form__input  {
+.form-contacts__input  {
 	background-color: transparent;
 	color: #b7b7b7;
 	border: 1px solid #565554;
@@ -732,22 +840,22 @@ input[name="header__radio"]:checked+.radio__button_styled {
 	margin-bottom: 13px;
 }
 
-.form__input_name, .form__input_email {
+.form-contacts__input_name, .form-contacts__input_email {
 	width: 237px;
 }
 
-.form__input_name {
+.form-contacts__input_name {
 	margin-right: 16px;
 }
 
-.form__textarea {
+.form-contacts__textarea {
 	width: 100%;
 	height: 143px;
 	resize: none;
 	font-size: 16px;
 }
 
-.form__checkbox_label {
+.form-contacts__checkbox_label {
 	font-size: 16px;
 	cursor: pointer;
 	float: left;
@@ -755,11 +863,11 @@ input[name="header__radio"]:checked+.radio__button_styled {
 	color: #b7b7b7;
 }
 
-.form__checkbox {
+.form-contacts__checkbox {
 	display: none;
 }
 
-.form__checkbox_real {
+.form-contacts__checkbox_real {
 	display: inline-block;
 	background-color: transparent;
 	border: 1px solid #565554;
@@ -768,7 +876,7 @@ input[name="header__radio"]:checked+.radio__button_styled {
 	position: relative;
 }
 
-.form__checkbox_check {
+.form-contacts__checkbox_check {
 	display: none;
 	width: 16px;
 	height: 16px;
@@ -780,19 +888,19 @@ input[name="header__radio"]:checked+.radio__button_styled {
 	margin: auto;
 }
 
-.form__checkbox:checked+.form__checkbox_real>.form__checkbox_check {
+.form-contacts__checkbox:checked+.form-contacts__checkbox_real>.form-contacts__checkbox_check {
 	display: inline-block;
 }
 
-.form__checkbox_text {
+.form-contacts__checkbox_text {
 	display: inline-block;
 }
 
-.form__checkbox_text, .form__checkbox_real {
+.form-contacts__checkbox_text, .form-contacts__checkbox_real {
 	vertical-align: middle;
 }
 
-.form__submit {
+.form-contacts__submit {
 	font-size: 16px;
 	float: right;
 	width: 120px;
@@ -801,7 +909,7 @@ input[name="header__radio"]:checked+.radio__button_styled {
 	border: none;
 }
 
-/*/// GET IN TOUCH CONTACTS ///*/
+												/*/// GET IN TOUCH CONTACTS ///*/
 
 .contacts {
 	display: inline-block;
@@ -828,14 +936,14 @@ input[name="header__radio"]:checked+.radio__button_styled {
 	margin-top: -60px;
 	padding: 20px 73px;
 	position: relative;
-	letter-spacing: 0.5px;
-	font-family: Lato Regular, sans-serif;
-	font-size: 16px;
 }
 
 
 .footer__copyright {
 	float: left;
+	letter-spacing: 0.5px;
+	font-family: Lato Regular, sans-serif;
+	font-size: 16px;
 }
 
 .footer__social {
@@ -848,4 +956,113 @@ input[name="header__radio"]:checked+.radio__button_styled {
 
 .footer .social-link {
 	text-decoration: none;
+}
+
+
+													/*/// Media queries ///*/
+
+@media screen and (max-width: 1200px) {
+
+	.header__search-submit_icon {
+		right: 5px;
+		top: -15px;
+	}
+
+	.whyus__column {
+		margin: 15px 0;
+	}
+
+	.about-us__pic {
+		max-width: 300px;
+	}
+
+	.our-products__column {
+		text-align: center;
+	}
+
+}
+
+@media screen and (max-width: 1024px) {
+
+	.header__menu, .header__search {
+		display: none;
+	}
+
+	.mobile-menu__burger, .mobile-menu__search_icon {
+	  display: block;
+	}
+
+	.header-slide__title  {
+		padding: 0 35px;
+		line-height: 75px;
+	}
+
+	.footer__social {
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 780px) {
+
+	.about-us__pic {
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 930px) {
+	.form-contacts {
+		display: block;
+		max-width: 490px;
+		margin: auto;
+	}
+
+	.contacts {
+		display: block;
+		max-width: 490px;
+		margin: 30px auto;
+	}
+
+	.get-in-touch__main {
+		position: static;
+	}
+
+}
+
+@media screen and (max-width: 640px) {
+
+	.form-contacts__input {
+		width: 100%;
+	}
+
+	.get-in-touch__main {
+    padding: 70px 40px;
+	}
+
+	.form-contacts__submit {
+		float: none;
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.get-in-touch__google-maps {
+		height: 800px
+	}
+
+	.footer__copyright {
+		float: left;
+		letter-spacing: 0px;
+		font-family: Lato Regular, sans-serif;
+		font-size: 15px;
+	}
+
+	.footer {
+		padding: 20px 20px;
+	}
+
+	.header-slide__title {
+		font-size: 40px;
+	}
+
 }

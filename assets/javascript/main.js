@@ -2,6 +2,7 @@ $(function(){
 
 	navigation.navigateOnClick();
 	navigation.navigateOnScroll();
+	mobileMenu.mobileToggle();
 
 	$(window).on('scroll', function(e) {
 		skillsAnim.skillsAnimate(e);

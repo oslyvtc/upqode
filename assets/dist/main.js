@@ -55,8 +55,7 @@ $(function(){
 	var numberOfSlides = 0; // Number of slides to slide
 	var nextChecked = 0; // Radio button to be checked
 	var execute = false; // To prevent multiple click on arrows
-	var radioExecute = false;
-	var intervalTime = 1000;
+	var setTime;
 
 
 	init();
@@ -68,30 +67,33 @@ $(function(){
 		});
 
 		if (slideRight) {
-					slideRight.on('click', function(e){
-			e.preventDefault();
-			next();
-		});
-		}
+			slideRight.on('click', function(e){
+				e.preventDefault();
+				clearTimeout(setTime);
+				next();
+			});
+		};
 
 		if (slideLeft) {
-		slideLeft.on('click', function(e){
-			e.preventDefault();
-			prev();
-		});
-		}
+			slideLeft.on('click', function(e){
+				e.preventDefault();
+				clearTimeout(setTime);
+				prev();
+			});
+		};
 
-		setTimeout(next, slideItem.eq(nextChecked).data('timeout'))
+		setTime = setTimeout(next, slideItem.eq(nextChecked).data('timeout'))
 
 		radioClick();	
 	}; 
 
 	function next() {
+		// debugger;
 		if (!execute) {
 			execute = true;
 			slider.animate({
 				marginLeft: "-=100%"
-			},1000, function() {
+			},900, function() {
 				slider.find('li').last().after(slider.find('li').first());
 				slider.css({
 					marginLeft: '+=100%'
@@ -106,12 +108,9 @@ $(function(){
 			};
 			radioButton.eq(nextChecked).prop("checked", true);
 			lastCheckedPos = nextChecked;
-			var timer = slideItem.eq(nextChecked).data('timeout')
-			setTimeout(next, timer)
-		} else {
-			setTimeout(next, timer)
-			return;
 		};
+		timer = slideItem.eq(nextChecked).data('timeout')		
+		setTime = setTimeout(next, timer)	
 	};
 
 	function prev() {
@@ -119,7 +118,7 @@ $(function(){
 			execute = true;
 			slider.animate({
 				marginLeft: "+=100%"
-			},1000, function() {
+			},900, function() {
 				slider.find('li').last().insertBefore(slider.find('li').first());
 				slider.css({
 					marginLeft: '-=100%'
@@ -135,6 +134,8 @@ $(function(){
 			radioButton.eq(nextChecked).prop("checked", true);
 			lastCheckedPos = nextChecked;
 		};
+		timer = slideItem.eq(nextChecked).data('timeout')		
+		setTime = setTimeout(next, timer)	
 	};
 
 	function radioClick() {
@@ -268,6 +269,6 @@ $(function(){
 
 	return {
 		skillsAnimate: skillsAnimate
-	}
+	};
 
 })();

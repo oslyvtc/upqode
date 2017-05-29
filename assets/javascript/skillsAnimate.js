@@ -23,6 +23,6 @@ var skillsAnim = (function(e) {
 
 	return {
 		skillsAnimate: skillsAnimate
-	}
+	};
 
 })();
